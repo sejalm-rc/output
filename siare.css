@@ -555,7 +555,7 @@ ul { list-style: none; }
 
   display: inline-block;
 
-  font-size: 28px;
+  font-size: 24px;
 
   line-height: 1;
 
@@ -611,7 +611,7 @@ ul { list-style: none; }
 ========================================================= */
 
 .about-info-col p{
-  font-size: 18px;
+  font-size: 15px;
 
   line-height: 1.75;
 
@@ -672,7 +672,7 @@ ul { list-style: none; }
 /* TEXT */
 
 .about-do-item p{
-  font-size: 17px;
+  font-size: 15px;
 
   line-height: 1.6;
 
@@ -741,7 +741,7 @@ ul { list-style: none; }
 /* NUMBER */
 
 .about-impact-item h2{
-  font-size: 36px;
+  font-size: 30px;
 
   line-height: 1;
 
@@ -784,7 +784,8 @@ ul { list-style: none; }
   overflow: hidden;
 
   width: 90%;
-  max-width: 1300px;
+  max-width: 1200px;
+  height: 100px;
 
   margin: 0 auto;
 
@@ -862,7 +863,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
 
-  font-size: 18px;
+  font-size: 15px;
 
   line-height: 1.8;
 
@@ -2839,231 +2840,164 @@ ul { list-style: none; }
 /* 
 About page responsiveness */
 
-/* =========================================================
-   RESPONSIVE HERO SECTION
-========================================================= */
+/* =========================================
+   ABOUT PAGE RESPONSIVE FIX
+========================================= */
 
-/* =========================================================
-   FORCE RESPONSIVE FIX
-========================================================= */
+@media(max-width:992px){
 
-*{
-  box-sizing:border-box;
-}
+  /* HERO */
 
-img{
-  max-width:100%;
-  height:auto;
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:991px){
-
-  .hero-full-section{
-    min-height:auto !important;
-
-    padding:60px 24px 120px !important;
+  .section-hero{
+    padding: 60px 24px !important;
+    min-height: auto !important;
   }
 
-  .hero-content-wrapper{
-    display:flex !important;
-    flex-direction:column !important;
+  .section-hero-content{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: 40px !important;
+
+    min-height: auto !important;
   }
 
-  .hero-left{
-    width:100% !important;
-    max-width:100% !important;
+  .section-hero .hero-left{
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
-  .hero-text-content{
-    text-align:center;
+  .section-hero .hero-right{
+    flex: 1 1 100% !important;
+    width: 100% !important;
+
+    justify-content: flex-start !important;
   }
 
-  .brand-logo-area{
-    justify-content:center;
+  /* RIGHT PANEL */
+
+  .about-side-panel{
+    width: 100% !important;
+    max-width: 420px !important;
   }
 
-  .hero-headline{
-    font-size:54px !important;
-    line-height:1.1 !important;
+  /* ABOUT GRID */
+
+  .about-info-grid{
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
   }
 
-  .hero-subtext{
-    font-size:18px !important;
-
-    max-width:100% !important;
+  .about-info-col{
+    padding: 0 !important;
   }
 
-  /* BUTTONS */
-
-  .home-hero-btns{
-    width:100%;
-
-    display:flex !important;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:16px !important;
+  .about-info-col::after{
+    display: none !important;
   }
 
-  .btn-primary,
-  .btn-outline-navy{
-    width:auto !important;
+  /* IMPACT */
+
+  .about-impact-grid{
+    grid-template-columns: 1fr 1fr !important;
   }
 
-  /* FEATURES */
+  /* BANNER */
 
-  .features-light-section{
-    position:relative !important;
-
-    right:auto !important;
-    bottom:auto !important;
-
-    width:100% !important;
-
-    margin-top:40px !important;
-  }
-
-  .features-row{
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    gap:30px !important;
-  }
-
-  .features-container{
-    width:100% !important;
-
-    display:flex !important;
-
-    justify-content:center !important;
-
-    flex-wrap:wrap !important;
-  }
-
-  .feature-item{
-    width:140px !important;
-
-    padding:0 10px !important;
-  }
-
-  .feature-item::after{
-    display:none !important;
-  }
-
-  .hero-curve-wrapper{
-    position:relative !important;
+  .impact-banner{
+    width: 100% !important;
   }
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media(max-width:768px){
 
-  .hero-full-section{
-    padding:40px 18px 80px !important;
+  .section-hero{
+    padding: 50px 18px !important;
   }
 
+  .hero-title,
   .hero-headline{
-    font-size:38px !important;
+    font-size: 38px !important;
+    line-height: 1.1 !important;
   }
 
-  .hero-subtext{
-    font-size:15px !important;
-
-    line-height:1.7 !important;
+  .hero-desc{
+    font-size: 15px !important;
   }
 
-  .s-logo-graphic{
-    width:240px !important;
-    height:auto !important;
+  .about-side-panel{
+    max-width: 100% !important;
   }
 
-  .home-hero-btns{
-    flex-direction:column !important;
+  .about-side-item{
+    min-height: 74px !important;
+    padding: 0 16px !important;
   }
 
-  .btn-primary,
-  .btn-outline-navy{
-    width:100% !important;
+  .about-info-section{
+    padding: 34px 18px !important;
   }
 
-  .features-container{
-    display:grid !important;
-
-    grid-template-columns:repeat(2,1fr) !important;
-
-    gap:20px !important;
+  .about-block-title{
+    font-size: 22px !important;
   }
 
-  .feature-item{
-    width:100% !important;
-
-    padding:0 !important;
+  .about-info-col p{
+    font-size: 14px !important;
   }
 
-  .feature-item img{
-    width:42px !important;
-    height:42px !important;
+  .about-impact-grid{
+    grid-template-columns: 1fr !important;
   }
 
-  .feature-item p{
-    font-size:10px !important;
+  .impact-banner{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: 18px !important;
+
+    padding: 24px 18px !important;
   }
 
-  .hero-curve-bottom .features-container{
-    display:grid !important;
-
-    grid-template-columns:repeat(2,1fr) !important;
+  .impact-banner p{
+    font-size: 15px !important;
   }
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+/* SMALL MOBILE */
 
 @media(max-width:480px){
 
+  .hero-title,
   .hero-headline{
-    font-size:30px !important;
+    font-size: 30px !important;
   }
 
-  .s-logo-graphic{
-    width:200px !important;
+  .section-hero{
+    padding: 42px 14px !important;
   }
 
-  .features-container,
-  .hero-curve-bottom .features-container{
-    grid-template-columns:1fr !important;
+  .about-info-section{
+    padding: 30px 14px !important;
   }
 
-  .feature-item{
-    border-bottom:1px solid #dbe5f1;
-
-    padding-bottom:18px !important;
+  .about-block-title{
+    font-size: 21px !important;
   }
 
-  .feature-item:last-child{
-    border-bottom:none;
+  .impact-banner-wrapper{
+    padding: 20px 14px 40px !important;
+  }
+
+  .impact-banner p{
+    font-size: 14px !important;
   }
 }
 
 /* About page new css */
-/* =========================================
-   NEW ABOUT SIDE PANEL
-========================================= */
-
-
 /* =========================================
    ABOUT SIDE PANEL
 ========================================= */
@@ -3148,7 +3082,7 @@ img{
 .about-side-item h4{
   margin:0;
 
-  color:#ffffff;
+  color:rgba(255, 255, 255, 0.88);;
 
   font-size:15px;
 
