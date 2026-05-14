@@ -2221,73 +2221,252 @@ ul { list-style: none; }
   max-width: 440px;
 }
 
-/* Features light section (middle of hero) */
-.features-light-section {
+/* =========================================
+   HERO MAIN SECTION HEIGHT
+========================================= */
+
+.hero-full-section{
   position: relative;
-  z-index: 4;
-  padding: 0 5%;
+
+  min-height: 980px;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
 }
-.features-row {
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content{
+  position: relative;
+
+  z-index: 10;
+
+  padding: 40px 70px 0;
+}
+
+/* =========================================
+   HERO CONTENT WRAPPER
+========================================= */
+
+.hero-content-wrapper{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
-  padding-bottom: 1.5rem;
-  flex-wrap: wrap;
+
+  gap: 40px;
 }
 
-.home-hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+/* =========================================
+   LEFT CONTENT
+========================================= */
 
-.features-container {
-  display: flex;
-  align-items: center;
-  gap: 0;
+.hero-left{
+  width: 52%;
+
+  padding-top: 30px;
 }
-.feature-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 1.5rem;
-  position: relative;
+
+/* =========================================
+   GLOBE SIDE
+========================================= */
+
+.hero-right{
+  width: 48%;
 }
-.feature-item:not(:last-child)::after {
-  content: '';
+
+/* =========================================
+   FEATURES + BUTTON SECTION
+========================================= */
+
+.features-light-section{
   position: absolute;
-  right: 0;
-  top: 10%;
-  height: 80%;
-  width: 1px;
-  background: var(--navy);
-  opacity: 0.3;
+
+  left: 0;
+  bottom: 250px;
+
+  width: 100%;
+
+  z-index: 20;
+
+  padding: 0 50px;
 }
-.feature-item img { width: 90px; height: 52px; object-fit: contain; margin-bottom: 0.5rem; }
-.feature-item p {
-  font-size: 0.7rem;
+
+/* ROW */
+
+.features-row{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.home-hero-btns{
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 10px;
+}
+
+/* PRIMARY BUTTON */
+
+.home-hero-btns .btn-primary{
+  height: 60px;
+
+  padding: 0 23px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b4fd3 0%,
+      #001d72 100%
+    );
+
+  color: #ffffff;
+
+  border: none;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  box-shadow:
+    0 10px 24px rgba(0,51,153,.22);
+}
+
+/* OUTLINE BUTTON */
+
+.home-hero-btns .btn-outline-navy{
+  height: 60px;
+
+  padding: 0 23px;
+
+  border-radius: 20px;
+
+  border: 2px solid #0d3f9d;
+
+  background: rgba(255,255,255,.80);
+
+  color: #0d3f9d;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features-container{
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0;
+
+  margin-top: 6px;
+}
+
+/* ITEM */
+
+.feature-item{
+  position: relative;
+
+  width: 145px;
+
+  text-align: center;
+
+  padding: 0 20px;
+}
+
+/* DIVIDER */
+
+.feature-item:not(:last-child)::after{
+  content: "";
+
+  position: absolute;
+
+  top: 10px;
+  right: 0;
+
+  width: 1px;
+  height: 88px;
+
+  background: rgba(0,18,71,.18);
+}
+
+/* ICON */
+
+.feature-item img{
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  margin: 0 auto 10px;
+}
+
+/* TEXT */
+
+.feature-item p{
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
   font-weight: 700;
-  color: var(--navy);
-  line-height: 1.3;
+
+  color: #001247;
+
   text-transform: uppercase;
 }
 
-/* Dark bottom bar */
 /* =========================================
-   EXACT BOTTOM CURVE LIKE REFERENCE
+   CURVE
 ========================================= */
 
 .hero-curve-wrapper{
   position: absolute;
-  bottom: -2px;
+
   left: 0;
+  bottom: 0;
+
   width: 100%;
+
   z-index: 5;
+
   overflow: hidden;
 }
 
-/* MAIN DARK CURVE */
+/* MAIN CURVE */
 
 .hero-curve-bottom{
   position: relative;
+
+  min-height: 165px;
 
   background:
     linear-gradient(
@@ -2296,116 +2475,70 @@ ul { list-style: none; }
       #001247 100%
     );
 
-  min-height: 150px;
+  border-top-left-radius: 50% 120px;
+  border-top-right-radius: 50% 120px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 62px 60px 34px;
 
-  padding: 36px 60px 30px;
-
-  /* THIS CREATES EXACT SMOOTH CURVE */
-  clip-path: ellipse(78% 100% at 50% 100%);
+  margin-left: -2%;
+  margin-right: -2%;
 }
 
-/* FEATURES */
+/* =========================================
+   CURVE FEATURES
+========================================= */
 
 .hero-curve-bottom .features-container{
-  width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 0;
 }
 
-/* ITEM */
-
 .hero-curve-bottom .feature-item{
-  position: relative;
+  width: auto;
 
   display: flex;
   align-items: center;
 
-  gap: 14px;
+  gap: 16px;
 
   padding: 0 34px;
 }
 
-/* DIVIDER */
+.hero-curve-bottom .feature-item img{
+  width: 40px;
+  height: 40px;
+
+  margin-bottom: 0;
+
+  filter: brightness(0) invert(1);
+}
+
+.hero-curve-bottom .feature-item p{
+  color: #ffffff;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
 
 .hero-curve-bottom .feature-item:not(:last-child)::after{
   content: "";
 
   position: absolute;
 
-  right: 0;
   top: 50%;
+  right: 0;
 
   transform: translateY(-50%);
 
   width: 1px;
-  height: 58px;
+  height: 54px;
 
-  background: rgba(255,255,255,0.20);
+  background: rgba(255,255,255,.16);
 }
-
-/* ICON */
-
-.hero-curve-bottom .feature-item img{
-  width: 50px;
-  height: 50px;
-
-  object-fit: contain;
-}
-
-/* TEXT */
-
-.hero-curve-bottom .feature-item p{
-  color: white;
-
-  font-size: 14px;
-  line-height: 1.45;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  margin: 0;
-
-  text-align: left;
-}
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media(max-width:992px){
-
-  .hero-curve-bottom{
-    clip-path: none;
-    border-top-left-radius: 80px;
-    border-top-right-radius: 80px;
-
-    padding: 45px 30px 35px;
-  }
-
-  .hero-curve-bottom .features-container{
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .hero-curve-bottom .feature-item::after{
-    display: none;
-  }
-}
-
-.hero-curve-bottom .features-container { gap: 0; }
-.hero-curve-bottom .feature-item { flex-direction: row; gap: 0.75rem; padding: 0 2rem; }
-.hero-curve-bottom .feature-item:not(:last-child)::after { background: rgba(255,255,255,0.2); }
-.hero-curve-bottom .feature-item img { width: 90px; height: 58px; margin-bottom: 0; filter: brightness(0) invert(1); }
-.hero-curve-bottom .feature-item p { color: #fff; text-align: left; font-size: 0.7rem; }
 
 /* Home About section */
 .about { padding: 5rem 5%; background: var(--bg-section); }
