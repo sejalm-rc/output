@@ -118,6 +118,100 @@ ul { list-style: none; }
 .btn-outline-blue   { color: var(--brand-blue); border-color: var(--brand-blue); background: transparent; }
 .btn-outline-blue:hover   { background: var(--brand-blue); color: #fff; }
 
+/* home page navigation */
+/* =========================================
+   DEFAULT HEADER (OTHER PAGES)
+========================================= */
+
+.home-header{
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: #001247;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+
+  height: 72px;
+}
+
+/* DEFAULT NAV LINKS */
+
+.nav-link{
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.85rem;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  color: #001247;
+
+  border-bottom: 3px solid transparent;
+
+  transition: var(--transition);
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active{
+  color: var(--brand-green);
+
+  border-bottom-color: var(--brand-green);
+}
+
+/* =========================================
+   HOME PAGE HEADER
+========================================= */
+
+.home-header{
+  background: #001247;
+}
+
+/* HOME PAGE LINKS */
+
+.home-header .nav-link{
+  color: #ffffff;
+}
+
+.home-header .nav-link:hover,
+.home-header .nav-link.active{
+  color: #4caf50;
+
+  border-bottom-color: #4caf50;
+}
+
+.home-login-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
 /* ─── 5. Navigation / Header ───────────────────────────────── */
 .header {
   position: sticky;
@@ -3174,7 +3268,6 @@ About page responsiveness */
     font-size:14px;
   }
 }
-
 /* About page new css */
 /* =========================================
    ABOUT SIDE PANEL

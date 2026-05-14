@@ -7888,6 +7888,219 @@ margin-bottom: -40px;
   }
 }
 
+/* =========================================
+   EVENTS HEADER
+========================================= */
+
+.event-header{
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 72px;
+
+  padding: 0 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  z-index: 1000;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.event-header .header-logo{
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.event-header .header-logo img{
+  height: 54px;
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.event-header .nav-toggle{
+  display: none;
+}
+
+.event-header .hamburger{
+  display: none;
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  color: #001247;
+}
+
+.event-header .nav-menu{
+  display: flex;
+  align-items: center;
+
+  gap: 0.25rem;
+
+  background: transparent;
+
+  padding: 0;
+
+  position: static;
+
+  width: auto;
+}
+
+/* NAV LINKS */
+
+.event-header .nav-link{
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.85rem;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  color: #001247;
+
+  border-bottom: 3px solid transparent;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+/* HOVER + ACTIVE */
+
+.event-header .nav-link:hover,
+.event-header .nav-link.active{
+  color: #4caf50;
+
+  border-bottom-color: #4caf50;
+}
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.event-header .header-action{
+  flex-shrink: 0;
+}
+
+.event-header .login-btn{
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  background: #001247;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.65rem 1.4rem;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  font-size: 0.85rem;
+
+  transition: 0.3s ease;
+}
+
+.event-header .login-btn:hover{
+  background: #1355a6;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+  .event-header{
+    height: 72px;
+  }
+
+  .event-header .hamburger{
+    display: block;
+  }
+
+  .event-header .nav-menu{
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 16px 20px;
+
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .event-header .nav-link{
+    width: 100%;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .event-header .nav-toggle:checked ~ .nav-menu{
+    display: flex;
+  }
+
+  .event-header .login-btn{
+    display: none;
+  }
+}
+
+@media(max-width:768px){
+
+  .event-header{
+    padding: 0 18px;
+  }
+
+  .event-header .header-logo img{
+    height: 46px;
+  }
+}
+
 
 
 

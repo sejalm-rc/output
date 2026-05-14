@@ -8685,8 +8685,431 @@ margin-bottom: -40px;
   }
 }
 
+/* /membership header css */
+/* =========================================
+   MEMBERSHIP HEADER
+========================================= */
 
+.membership-header{
+  position: sticky;
+  top: 0;
+  left: 0;
 
+  width: 100%;
 
+  height: 72px;
 
+  padding: 0 4%;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  z-index: 1000;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.membership-header .header-logo{
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.membership-header .header-logo img{
+  height: 54px;
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.membership-header .nav-toggle{
+  display: none;
+}
+
+.membership-header .hamburger{
+  display: none;
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  color: #001247;
+}
+
+.membership-header .nav-menu{
+  display: flex;
+  align-items: center;
+
+  gap: 0.25rem;
+
+  background: transparent;
+
+  padding: 0;
+
+  position: static;
+
+  width: auto;
+}
+
+/* NAV LINKS */
+
+.membership-header .nav-link{
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.85rem;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  color: #001247;
+
+  border-bottom: 3px solid transparent;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+/* ACTIVE + HOVER */
+
+.membership-header .nav-link:hover,
+.membership-header .nav-link.active{
+  color: #4caf50;
+
+  border-bottom-color: #4caf50;
+}
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.membership-header .header-action{
+  flex-shrink: 0;
+}
+
+.membership-header .login-btn{
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  background: #001247;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.65rem 1.4rem;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  font-size: 0.85rem;
+
+  transition: 0.3s ease;
+}
+
+.membership-header .login-btn:hover{
+  background: #1355a6;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+  .membership-header{
+    height: 72px;
+  }
+
+  .membership-header .hamburger{
+    display: block;
+  }
+
+  .membership-header .nav-menu{
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 16px 20px;
+
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .membership-header .nav-link{
+    width: 100%;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .membership-header .nav-toggle:checked ~ .nav-menu{
+    display: flex;
+  }
+
+  .membership-header .login-btn{
+    display: none;
+  }
+}
+
+@media(max-width:768px){
+
+  .membership-header{
+    padding: 0 18px;
+  }
+
+  .membership-header .header-logo img{
+    height: 46px;
+  }
+}
+
+/* client header css */
+
+/* =========================================
+   CLIENTS HEADER
+========================================= */
+
+.header{
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 72px;
+
+  padding: 0 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  z-index: 1000;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.header .header-logo{
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.header .header-logo img{
+  height: 54px;
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.header .nav-toggle{
+  display: none;
+}
+
+.header .hamburger{
+  display: none;
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  color: #001247;
+}
+
+.header .nav-menu{
+  display: flex;
+  align-items: center;
+
+  gap: 0.25rem;
+
+  background: transparent;
+
+  padding: 0;
+
+  position: static;
+
+  width: auto;
+}
+
+/* NAV LINKS */
+
+.header .nav-link{
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.85rem;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  color: #001247;
+
+  border-bottom: 3px solid transparent;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+/* HOVER + ACTIVE */
+
+.header .nav-link:hover,
+.header .nav-link.active{
+  color: #4caf50;
+
+  border-bottom-color: #4caf50;
+}
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.header .header-action{
+  flex-shrink: 0;
+}
+
+.header .login-btn{
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  background: #001247;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.65rem 1.4rem;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  font-size: 0.85rem;
+
+  transition: 0.3s ease;
+}
+
+.header .login-btn:hover{
+  background: #1355a6;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+  .header{
+    height: 72px;
+  }
+
+  .header .hamburger{
+    display: block;
+  }
+
+  .header .nav-menu{
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 16px 20px;
+
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .header .nav-link{
+    width: 100%;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .header .nav-toggle:checked ~ .nav-menu{
+    display: flex;
+  }
+
+  .header .login-btn{
+    display: none;
+  }
+}
+
+@media(max-width:768px){
+
+  .header{
+    padding: 0 18px;
+  }
+
+  .header .header-logo img{
+    height: 46px;
+  }
+}
