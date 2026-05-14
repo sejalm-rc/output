@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proceedings – SIARE Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="siare.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="header-logo">
+    <img src="images/image.png" alt="SIARE Logo">
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="hamburger">&#9776;</label>
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html"       class="nav-link">HOME</a>
+    <a href="about.html"       class="nav-link">ABOUT SIARE</a>
+    <a href="proceedings.html" class="nav-link active">PROCEEDINGS</a>
+    <a href="events.html"      class="nav-link">EVENTS</a>
+    <a href="membership.html"  class="nav-link">MEMBERSHIP</a>
+    <a href="clients.html"     class="nav-link">CLIENTS</a>
+    <a href="contact.html"     class="nav-link">CONTACT US</a>
+  </nav>
+  <div class="header-action">
+    <button class="login-btn"><i class="fa-solid fa-user"></i> LOGIN</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="section-hero proceedings-hero">
+  <div class="section-hero-content">
+    <div class="hero-left">
+      <h1 class="hero-title">SIARE<br><span class="text-green">PROCEEDINGS</span></h1>
+      <div class="title-underline"></div>
+      <p class="hero-desc">Explore high-quality, peer-reviewed conference proceedings across diverse disciplines and emerging technologies. Published for global visibility, impact, and knowledge dissemination.</p>
+      <div class="hero-buttons" style="margin-top:1.5rem;">
+        <button class="btn-green"><i class="fa-regular fa-paper-plane"></i> SUBMIT PROPOSAL</button>
+        <button class="btn-outline-white"><i class="fa-solid fa-magnifying-glass"></i> BROWSE PROCEEDINGS</button>
+      </div>
+    </div>
+    <!-- <div class="hero-right">
+      <ul class="hero-feature-list-proceedings">
+        <li><img src="icons/document.png" alt=""><span>Scopus Indexed Proceedings</span></li>
+        <li><img src="icons/doi.png"    alt=""><span>DOI &amp; ISSN Enabled</span></li>
+        <li><img src="icons/user.png"   alt=""><span>Rigorous Peer Review</span></li>
+        <li><img src="icons/globe.png"  alt=""><span>Global Visibility &amp; Impact</span></li>
+        <li><img src="icons/chart.png"  alt=""><span>SDG Aligned Research</span></li>
+      </ul>
+    </div> -->
+  </div>
+</section>
+
+<!-- PROCEEDINGS CATEGORIES -->
+<section class="proc-categories-section">
+  <div class="proc-categories-inner">
+    <div class="proc-cat-label">
+      <h3>PROCEEDINGS<br><span>CATEGORIES</span></h3>
+      <div class="underline-bar"></div>
+    </div>
+
+    <div class="proc-cats-grid">
+      <div class="proc-cat-card blue">
+        <i class="fa-solid fa-gear"></i>
+        <div>Engineering &amp; Technology</div>
+        <a href="#" class="view-link">View Proceedings →</a>
+      </div>
+      <div class="proc-cat-card green">
+        <i class="fa-solid fa-seedling"></i>
+        <div>Agriculture &amp; Biological Sciences</div>
+        <a href="#" class="view-link">View Proceedings →</a>
+      </div>
+      <div class="proc-cat-card purple">
+        <i class="fa-solid fa-brain"></i>
+        <div>Computer Science &amp; Information Technology</div>
+        <a href="#" class="view-link">View Proceedings →</a>
+      </div>
+      <div class="proc-cat-card orange">
+        <i class="fa-solid fa-chart-bar"></i>
+        <div>Management &amp; Economics</div>
+        <a href="#" class="view-link">View Proceedings →</a>
+      </div>
+      <div class="proc-cat-card red">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <div>Health &amp; Medical Sciences</div>
+        <a href="#" class="view-link">View Proceedings →</a>
+      </div>
+      <div class="proc-cat-card teal">
+        <i class="fa-solid fa-earth-americas"></i>
+        <div>Environment &amp; Sustainability</div>
+        <a href="#" class="view-link">View Proceedings →</a>
+      </div>
+    </div>
+
+    <div class="proc-why-box">
+      <h4>WHY PUBLISH WITH SIARE?</h4>
+      <div class="underline-bar"></div>
+      <div class="proc-why-item"><i class="fa-solid fa-circle-check"></i><p>High-quality peer-reviewed publications</p></div>
+      <div class="proc-why-item"><i class="fa-solid fa-circle-check"></i><p>Global indexing and discoverability</p></div>
+      <div class="proc-why-item"><i class="fa-solid fa-circle-check"></i><p>Permanent DOI &amp; ISSN assignment</p></div>
+      <div class="proc-why-item"><i class="fa-solid fa-circle-check"></i><p>Wide dissemination and academic impact</p></div>
+      <div class="proc-why-item"><i class="fa-solid fa-circle-check"></i><p>Support for sustainable development goals</p></div>
+      <button class="author-guidelines-btn"><i class="fa-solid fa-file-lines"></i> AUTHOR GUIDELINES</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE ICON BAR -->
+<div style="padding:0 5% 2rem;">
+  <div class="icon-features-row">
+    <div class="icon-feature"><i class="fa-solid fa-shield-halved"></i><p>Scopus Indexed <br>Proceedings</p></div>
+    <div class="icon-feature"><i class="fa-solid fa-file-contract"></i><p>DOI &amp; ISSN<br>ENABLED</p></div>
+    <div class="icon-feature"><i class="fa-solid fa-earth-americas" style="color:#4caf50;"></i><p>Rigorous <br>Peer Review</p></div>
+    <div class="icon-feature"><i class="fa-solid fa-lock"></i><p>Global Visibility &amp;<br>Impact</p></div>
+    <div class="icon-feature"><i class="fa-solid fa-building-columns"></i><p>SDG Aligned <br>Research</p></div>
+    <div class="icon-feature"><i class="fa-solid fa-people-group"></i><p>COLLABORATE.<br>PUBLISH. IMPACT.</p></div>
+  </div>
+</div>
+
+<!-- PUBLISH STRIP -->
+<div class="publish-strip">
+  <div class="container d-flex justify-between align-center" style="gap:2rem;flex-wrap:wrap;max-width:1280px;margin:0 auto;">
+    <div class="strip-text-left">
+      <h2>BE PART OF GLOBAL ACADEMIC EXCELLENCE</h2>
+      <p style="color:#cbd5e1;font-size:0.88rem;">Submit your research and join a community of global scholars driving knowledge forward.</p>
+    </div>
+    <button class="btn-green"><i class="fa-regular fa-paper-plane"></i> SUBMIT PROPOSAL</button>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo mb-1"><img src="images/footerlogo.png" alt="SIARE" style="width:220px;height:auto;object-fit:contain;"></div>
+      <p class="footer-tagline mb-1">RESEARCH &nbsp;&bull;&nbsp; PUBLISH &nbsp;&bull;&nbsp; COLLABORATE &nbsp;&bull;&nbsp; GROW</p>
+      <p class="footer-desc">Advancing research, inspiring innovation, and building a global academic community through collaboration, publication, and knowledge sharing.</p>
+      <div class="social-icons mt-2">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading">QUICK LINKS</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About SIARE</a></li>
+        <li><a href="proceedings.html">Proceedings</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="membership.html" class="text-green">Membership</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading">PROCEEDINGS</h4>
+      <ul class="footer-links">
+        <li><a href="#">Engineering &amp; Technology</a></li>
+        <li><a href="#">Agriculture &amp; Biological Sciences</a></li>
+        <li><a href="#">Computer Science &amp; IT</a></li>
+        <li><a href="#">Management &amp; Economics</a></li>
+        <li><a href="#">Health &amp; Medical Sciences</a></li>
+        <li><a href="#">Environment &amp; Sustainability</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading">CONTACT US</h4>
+      <ul class="footer-contact">
+        <li><i class="fa-solid fa-location-dot"></i><span>SIARE Proceedings Platform<br>Global Academic Network</span></li>
+        <li><i class="fa-regular fa-envelope"></i><span>info@siare.org</span></li>
+        <li><i class="fa-solid fa-globe"></i><span>www.siare.org</span></li>
+        <li><i class="fa-solid fa-phone"></i><span>+91 123 456 7890</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom border-top mt-3 pt-1 pb-1">
+    <div class="container d-flex justify-between align-center" style="font-size:0.75rem;color:#94a3b8;flex-wrap:wrap;gap:0.5rem;">
+      <p>&copy; 2025 SIARE. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a><span>|</span><a href="#">Terms of Use</a><span>|</span><a href="#">Disclaimer</a>
+      </div>
+      <p>Designed with <i class="fa-solid fa-heart text-green"></i> for Research &amp; Innovation</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
