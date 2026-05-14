@@ -3057,3 +3057,132 @@ img{
     border-bottom:none;
   }
 }
+
+/* About page new css */
+/* =========================================
+   NEW ABOUT SIDE PANEL
+========================================= */
+
+
+/* =========================================
+   ABOUT SIDE PANEL
+========================================= */
+
+.about-side-panel{
+  display:flex;
+  flex-direction:column;
+
+  width:310px;
+
+}
+
+/* ITEM */
+
+.about-side-item{
+  width:100%;
+
+  min-height:82px;
+
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  padding:0 22px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.10);
+
+  transition:.3s ease;
+}
+
+/* HOVER */
+
+.about-side-item:hover{
+  background:
+    rgba(255,255,255,.03);
+
+  transform:translateX(6px);
+}
+
+/* ICON */
+
+.about-side-icon{
+  width:54px;
+  height:54px;
+
+  flex:0 0 54px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:2px solid rgba(31,108,255,.9);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,120,255,.18),
+      rgba(0,25,90,.96)
+    );
+
+  box-shadow:
+    0 0 18px rgba(0,102,255,.55);
+}
+
+/* IMAGE */
+
+.about-side-icon img{
+  width:24px;
+  height:24px;
+
+  object-fit:contain;
+
+  filter:brightness(0) invert(1);
+}
+
+/* TEXT */
+
+.about-side-item h4{
+  margin:0;
+
+  color:#ffffff;
+
+  font-size:15px;
+
+  line-height:1.2;
+
+  font-weight:700;
+
+  letter-spacing:.3px;
+
+  text-transform:uppercase;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .about-side-panel{
+    width:100%;
+  }
+
+  .about-side-item{
+    min-height:74px;
+
+    padding:0 16px;
+  }
+
+  .about-side-item h4{
+    font-size:13px;
+  }
+
+  .about-side-icon{
+    width:48px;
+    height:48px;
+
+    flex:0 0 48px;
+  }
+}
