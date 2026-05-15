@@ -7973,6 +7973,570 @@ margin-bottom: -40px;
   }
 }
 
+/* =========================================
+   CLIENT HEADER
+========================================= */
+
+.client-header{
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+
+  height: 72px;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.client-header-logo{
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.client-header-logo img{
+  height: 54px;
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.client-nav-toggle{
+  display: none;
+}
+
+.client-hamburger{
+  display: none;
+
+  cursor: pointer;
+
+  font-size: 1.7rem;
+
+  color: #001247;
+}
+
+.client-nav-menu{
+  display: flex;
+  align-items: center;
+
+  gap: 0.25rem;
+
+  background: transparent;
+
+  padding: 0;
+
+  position: static;
+
+  width: auto;
+}
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.client-nav-link{
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.85rem;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  color: #001247;
+
+  border-bottom: 3px solid transparent;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+.client-nav-link:hover,
+.client-nav-link.active{
+  color: #4caf50;
+
+  border-bottom-color: #4caf50;
+}
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.client-header-action{
+  flex-shrink: 0;
+}
+
+.client-login-btn{
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  background: #001247;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.65rem 1.4rem;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  font-size: 0.85rem;
+
+  transition: 0.3s ease;
+}
+
+.client-login-btn:hover{
+  background: #1355a6;
+}
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media(max-width:1200px){
+
+  .client-nav-link{
+    padding: 0.45rem 0.6rem;
+
+    font-size: 0.75rem;
+  }
+
+  .client-login-btn{
+    padding: 0.6rem 1rem;
+
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================
+   TABLET / MOBILE NAVIGATION
+========================================= */
+
+@media(max-width:992px){
+
+  .client-header{
+    padding: 0 20px;
+  }
+
+  .client-hamburger{
+    display: block;
+  }
+
+  .client-nav-menu{
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 18px 22px;
+
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .client-nav-link{
+    width: 100%;
+
+    padding: 12px 0;
+
+    font-size: 0.82rem;
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .client-nav-toggle:checked ~ .client-nav-menu{
+    display: flex;
+  }
+
+  .client-header-action{
+    margin-left: auto;
+    margin-right: 14px;
+  }
+
+  .client-login-btn{
+    height: 42px;
+
+    padding: 0 16px;
+
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .client-header{
+    height: 68px;
+
+    padding: 0 16px;
+  }
+
+  .client-header-logo img{
+    height: 42px;
+  }
+
+  .client-nav-menu{
+    top: 68px;
+  }
+
+  .client-login-btn{
+    height: 40px;
+
+    padding: 0 14px;
+
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .client-header-logo img{
+    height: 38px;
+  }
+
+  .client-login-btn{
+    font-size: 0.72rem;
+
+    padding: 0 12px;
+  }
+
+  .client-hamburger{
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================
+   CONTACT HEADER
+========================================= */
+
+.contact-header{
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+
+  height: 72px;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.contact-header-logo{
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.contact-header-logo img{
+  height: 54px;
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.contact-nav-toggle{
+  display: none;
+}
+
+.contact-hamburger{
+  display: none;
+
+  cursor: pointer;
+
+  font-size: 1.7rem;
+
+  color: #001247;
+}
+
+.contact-nav-menu{
+  display: flex;
+  align-items: center;
+
+  gap: 0.25rem;
+
+  background: transparent;
+
+  padding: 0;
+
+  position: static;
+
+  width: auto;
+}
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.contact-nav-link{
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.85rem;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  color: #001247;
+
+  border-bottom: 3px solid transparent;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+.contact-nav-link:hover,
+.contact-nav-link.active{
+  color: #4caf50;
+
+  border-bottom-color: #4caf50;
+}
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.contact-header-action{
+  flex-shrink: 0;
+}
+
+.contact-login-btn{
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  background: #001247;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.65rem 1.4rem;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  font-size: 0.85rem;
+
+  transition: 0.3s ease;
+}
+
+.contact-login-btn:hover{
+  background: #1355a6;
+}
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media(max-width:1200px){
+
+  .contact-nav-link{
+    padding: 0.45rem 0.6rem;
+
+    font-size: 0.75rem;
+  }
+
+  .contact-login-btn{
+    padding: 0.6rem 1rem;
+
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================
+   TABLET / MOBILE NAVIGATION
+========================================= */
+
+@media(max-width:992px){
+
+  .contact-header{
+    padding: 0 20px;
+  }
+
+  .contact-hamburger{
+    display: block;
+  }
+
+  .contact-nav-menu{
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 18px 22px;
+
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .contact-nav-link{
+    width: 100%;
+
+    padding: 12px 0;
+
+    font-size: 0.82rem;
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .contact-nav-toggle:checked ~ .contact-nav-menu{
+    display: flex;
+  }
+
+  .contact-header-action{
+    margin-left: auto;
+    margin-right: 14px;
+  }
+
+  .contact-login-btn{
+    height: 42px;
+
+    padding: 0 16px;
+
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .contact-header{
+    height: 68px;
+
+    padding: 0 16px;
+  }
+
+  .contact-header-logo img{
+    height: 42px;
+  }
+
+  .contact-nav-menu{
+    top: 68px;
+  }
+
+  .contact-login-btn{
+    height: 40px;
+
+    padding: 0 14px;
+
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .contact-header-logo img{
+    height: 38px;
+  }
+
+  .contact-login-btn{
+    font-size: 0.72rem;
+
+    padding: 0 12px;
+  }
+
+  .contact-hamburger{
+    font-size: 1.5rem;
+  }
+}
+
 
 
 

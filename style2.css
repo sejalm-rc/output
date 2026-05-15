@@ -7892,33 +7892,33 @@ margin-bottom: -40px;
    EVENTS HEADER
 ========================================= */
 
-.event-header{
+.events-page-header{
   position: sticky;
   top: 0;
   left: 0;
 
   width: 100%;
 
-  height: 72px;
-
-  padding: 0 4%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 1000;
 
   background: #ffffff;
 
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 
-  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+
+  height: 72px;
 }
 
 /* =========================================
    LOGO
 ========================================= */
 
-.event-header .header-logo{
+.events-header-logo{
   display: flex;
   align-items: center;
 
@@ -7927,7 +7927,7 @@ margin-bottom: -40px;
   flex-shrink: 0;
 }
 
-.event-header .header-logo img{
+.events-header-logo img{
   height: 54px;
   width: auto;
 
@@ -7938,23 +7938,26 @@ margin-bottom: -40px;
    NAVIGATION
 ========================================= */
 
-.event-header .nav-toggle{
+.events-nav-toggle{
   display: none;
 }
 
-.event-header .hamburger{
+.events-hamburger{
   display: none;
 
   cursor: pointer;
 
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 
   color: #001247;
 }
 
-.event-header .nav-menu{
+.events-nav-menu{
+  flex: 1;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
   gap: 0.25rem;
 
@@ -7962,14 +7965,14 @@ margin-bottom: -40px;
 
   padding: 0;
 
-  position: static;
-
   width: auto;
 }
 
-/* NAV LINKS */
+/* =========================================
+   NAV LINKS
+========================================= */
 
-.event-header .nav-link{
+.events-nav-link{
   display: inline-flex;
   align-items: center;
 
@@ -7994,10 +7997,8 @@ margin-bottom: -40px;
   text-decoration: none;
 }
 
-/* HOVER + ACTIVE */
-
-.event-header .nav-link:hover,
-.event-header .nav-link.active{
+.events-nav-link:hover,
+.events-nav-link.active{
   color: #4caf50;
 
   border-bottom-color: #4caf50;
@@ -8007,11 +8008,11 @@ margin-bottom: -40px;
    LOGIN BUTTON
 ========================================= */
 
-.event-header .header-action{
+.events-header-action{
   flex-shrink: 0;
 }
 
-.event-header .login-btn{
+.events-login-btn{
   display: inline-flex;
   align-items: center;
 
@@ -8034,25 +8035,96 @@ margin-bottom: -40px;
   transition: 0.3s ease;
 }
 
-.event-header .login-btn:hover{
+.events-login-btn:hover{
   background: #1355a6;
 }
 
 /* =========================================
-   RESPONSIVE
+   LARGE TABLET
+========================================= */
+
+@media(max-width:1200px){
+
+  .events-nav-link{
+    padding: 0.45rem 0.6rem;
+
+    font-size: 0.75rem;
+  }
+
+  .events-login-btn{
+    padding: 0.6rem 1rem;
+
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================
+   TABLET / MOBILE NAVIGATION
 ========================================= */
 
 @media(max-width:992px){
 
-  .event-header{
+  .events-page-header{
     height: 72px;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: 40px 1fr auto;
+
+    align-items: center;
   }
 
-  .event-header .hamburger{
-    display: block;
+  /* HAMBURGER LEFT */
+
+  .events-hamburger{
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    order: 1;
+
+    font-size: 1.7rem;
+
+    color: #001247;
+
+    cursor: pointer;
   }
 
-  .event-header .nav-menu{
+
+  .events-header-logo img{
+    height: 42px;
+  }
+
+  /* LOGIN RIGHT */
+
+  .events-header-action{
+    order: 3;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 0;
+  }
+
+  .events-login-btn{
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 42px;
+
+    padding: 0 16px;
+
+    font-size: 0.78rem;
+  }
+
+  /* MOBILE MENU */
+
+  .events-nav-menu{
     position: absolute;
 
     top: 72px;
@@ -8065,44 +8137,56 @@ margin-bottom: -40px;
     flex-direction: column;
 
     align-items: flex-start;
+    justify-content: flex-start;
 
-    padding: 16px 20px;
+    padding: 18px 22px;
 
     display: none;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+    z-index: 999;
   }
 
-  .event-header .nav-link{
+  .events-nav-link{
     width: 100%;
 
     padding: 12px 0;
 
+    font-size: 0.82rem;
+
     border-bottom: 1px solid rgba(0,0,0,0.06);
   }
 
-  .event-header .nav-toggle:checked ~ .nav-menu{
+  .events-nav-toggle:checked ~ .events-nav-menu{
     display: flex;
   }
-
-  .event-header .login-btn{
-    display: none;
-  }
 }
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width:768px){
 
-  .event-header{
-    padding: 0 18px;
+  .events-page-header{
+    height: 68px;
+
+    padding: 0 16px;
+
+    grid-template-columns: 34px 1fr auto;
   }
 
-  .event-header .header-logo img{
-    height: 46px;
+  .events-header-logo img{
+    height: 38px;
+  }
+
+  .events-nav-menu{
+    top: 68px;
+  }
+
+
+  .events-hamburger{
+    font-size: 1.5rem;
   }
 }
-
-
-
-
-
-
