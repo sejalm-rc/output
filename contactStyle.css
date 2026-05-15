@@ -8379,7 +8379,7 @@ margin-bottom: -40px;
 }
 
 .contact-login-btn{
-  display: inline-flex;
+  display: none;
   align-items: center;
 
   gap: 0.5rem;
@@ -8523,17 +8523,18 @@ margin-bottom: -40px;
 @media(max-width:480px){
 
   .contact-header-logo img{
-    height: 38px;
+    height: 50px;
   }
 
   .contact-login-btn{
     font-size: 0.72rem;
-
+display: none;
     padding: 0 12px;
   }
 
   .contact-hamburger{
     font-size: 1.5rem;
+    margin-left: 200px;
   }
 }
 

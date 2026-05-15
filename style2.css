@@ -8013,7 +8013,7 @@ margin-bottom: -40px;
 }
 
 .events-login-btn{
-  display: inline-flex;
+  display: none;
   align-items: center;
 
   gap: 0.5rem;
@@ -8178,7 +8178,7 @@ margin-bottom: -40px;
   }
 
   .events-header-logo img{
-    height: 38px;
+    height: 50px;
   }
 
   .events-nav-menu{
@@ -8188,5 +8188,6 @@ margin-bottom: -40px;
 
   .events-hamburger{
     font-size: 1.5rem;
+    margin-left: 200px;
   }
 }
